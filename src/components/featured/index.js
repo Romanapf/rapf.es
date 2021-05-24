@@ -2,8 +2,6 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import './featured.css'
 
-
-
 const Featured = () => (
   
   <StaticQuery
@@ -29,7 +27,7 @@ const Featured = () => (
 
     render={data => (
       
-      <div className="featured-content">
+      <div className="featured-content" >
           {data.allContentfulProjects.nodes.map( node => (
             <div className="featured-content--box" >
               <span className="featured-year">
