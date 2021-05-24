@@ -2,6 +2,7 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+console.log(`.env.${process.env.NODE_ENV}`);
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -14,7 +15,7 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `yxewvvs7ogvx`,
-        accessToken: `J6q7X6VKM_LIbfdHjzKq37CIH1qN4_rgjBVqVsk-gXI`,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     `gatsby-plugin-image`,
