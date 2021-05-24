@@ -1,10 +1,16 @@
 
+.featured-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.featured-content--box{
+    position: relative;
+}
 .featured-titles{
- font-family: 'Helvetica';
- font-size: 6em;
- display: flex;
- flex-direction: column;
- align-items: flex-end;
+font-family: 'america-bold';
+ font-size: 4em;
  text-transform: uppercase;
  font-weight: bolder;
  line-height: normal;
@@ -15,13 +21,23 @@
  -webkit-text-stroke-color: black;
 }
 
-.featured-titles span{
+.featured-year{
+    font-family: 'Helvetica';
+    font-size: 1rem;
+    position: absolute;
+    left: -20px;
+    top: -10px;
+}
+
+
+.featured-titles{
     transition-timing-function: cubic-bezier(.86,-1.15,.48,1.68);
     -webkit-transition-timing-function: cubic-bezier(.86,-1.15,.48,1.68);
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
-.featured-titles span:hover{
+.featured-titles:hover{
     background-image: linear-gradient(40deg, #EB1212, #FF00D1);
      /* Create the gradient. */
   background-image: linear-gradient(40deg, #EB1212, #FF00D1);
@@ -32,12 +48,20 @@
 
   /* Use the text as a mask for the background. */
   /* This will show the gradient as a text color rather than element bg. */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
-	transform-origin: center center;
+    transform-origin: center center;
 
+   }
+
+   .featured-images{
+    display: none;
+   }
+
+   .featured-images.active{
+       display: block;
    }

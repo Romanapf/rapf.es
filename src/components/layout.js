@@ -22,12 +22,12 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         <footer
           style={{
-            marginTop: `2rem`,
+            marginTop: `2rem`, padding: `40px`, fontFamily:'Helvetica', position: `absolute`, bottom: 0
           }}
         >
           © {new Date().getFullYear()}, Built by
           {` `}
-          <a href="https://www.gatsbyjs.com">RAPF</a>
+          <a href="https:romanapf.com">RAPF</a>
         </footer>
       </div>
     </>
