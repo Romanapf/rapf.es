@@ -1,0 +1,43 @@
+
+.featured-titles{
+ font-family: 'Helvetica';
+ font-size: 6em;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-end;
+ text-transform: uppercase;
+ font-weight: bolder;
+ line-height: normal;
+ margin-right: 20px;
+ color: black;
+ -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+ -webkit-text-stroke-width: 1px;
+ -webkit-text-stroke-color: black;
+}
+
+.featured-titles span{
+    transition-timing-function: cubic-bezier(.86,-1.15,.48,1.68);
+    -webkit-transition-timing-function: cubic-bezier(.86,-1.15,.48,1.68);
+    cursor: pointer;
+}
+
+.featured-titles span:hover{
+    background-image: linear-gradient(40deg, #EB1212, #FF00D1);
+     /* Create the gradient. */
+  background-image: linear-gradient(40deg, #EB1212, #FF00D1);
+  
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+	transform-origin: center center;
+
+   }
