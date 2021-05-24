@@ -13,6 +13,8 @@ const Nav = () => (
                 <Link className={window.location.href.indexOf('Stories') > 0 ? 'nav_item--link active' : 'nav_item--link'} to='/contact' to='/stories'>Stories</Link>
                 <Link className={window.location.href.indexOf('About') > 0 ? 'nav_item--link active' : 'nav_item--link'} to='/contact' to='/about'>About</Link>
                 <Link className={window.location.href.indexOf('contact') > 0 ? 'nav_item--link active' : 'nav_item--link'} to='/contact' to='/contact'>Contact</Link>
+                <Link className={window.location.href.indexOf('contact') > 0 ? 'nav_item--link active' : 'nav_item--link'} to='/contact' to='/contact'>hola</Link>
+
             </div>
         </div>
     </nav>
