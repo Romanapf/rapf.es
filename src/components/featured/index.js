@@ -1,52 +1,47 @@
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import React, { useState } from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import './featured.css'
 
-const Featured = () => (
-  
-  <StaticQuery
-    query={graphql`
-      {
+const Featured = () => {
+  const data = useStaticQuery(graphql`
+   {
         allContentfulProjects(limit: 10) {
           nodes {
             title
             year
             id
+            color
             featuredImage {
               fluid {
-                src
+                srcSet
               }
             }
           }
         }
       }
-    `}
+  `)
 
-    
-    
+  const [isHovering, setIsHovering] = useState(false);
 
-    render={data => (
-      
-      <div className="featured-content" >
-          {data.allContentfulProjects.nodes.map( node => (
-            <div className="featured-content--box" >
-              <span className="featured-year">
-                {node.year}
-              </span>
-              <h2 key="{node.id}" className="featured-titles">
-                {node.title}
-              </h2>
-              <img className="featured-images" src={node.featuredImage.fluid.src}></img>
-              
-            </div>
-          ))}
-      
-    </div>
-    )}
-  ></StaticQuery>
-)
+
+  return  <div className="featured-content">
+    {data.allContentfulProjects.nodes.map( node => (
+      <div
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+      >
+        <img className={`featured-images ${ isHovering ? "" : "hidden"}`} srcSet={node.featuredImage.fluid.srcSet}></img>
+        <div className="featured-content--box">
+          <h2 className="featured-titles" style={{color: `${node.color}`}}>
+            {node.title}
+          </h2>
+        </div>
+      </div>
+    ))}
+  </div>
+}
+
+
 
 export default Featured
-
-
 

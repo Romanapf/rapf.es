@@ -6,7 +6,7 @@ import './nav.css';
 
 const Nav = () => (
     <nav>
-        <div className="nav__items">
+        <div className="nav__items py-8">
             <a className="nav_logo"><span>ROMAN</span><span>APF</span></a>
             <div>
                 <Link className={window.location.href.indexOf('works') > 0 ? 'nav_item--link active' : 'nav_item--link'} to='/works'>Works</Link>

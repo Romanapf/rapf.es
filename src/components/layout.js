@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div>
+      <div className="md:container md:mx-auto">
         <Nav />
         <main>{children}</main>
         <footer
